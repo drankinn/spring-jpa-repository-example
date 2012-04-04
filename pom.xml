@@ -1,0 +1,99 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>jpa-repository-example</groupId>
+  <artifactId>jpa-repository-example</artifactId>
+  <packaging>war</packaging>
+  <version>1.0</version>
+
+  <name>jpa-repository-example Maven Webapp</name>
+  <description>Sample projects for Spring Data JPA</description>
+  <inceptionYear>2012</inceptionYear>
+  <developers>
+      <developer>
+          <id>Drankinn</id>
+          <name>Lance Andersen</name>
+          <email>lance.andersen@us.usana.com</email>
+      </developer>
+  </developers>
+  <properties>
+      <spring.version>3.1.1.RELEASE</spring.version>
+      <spring.data.version>1.0.3.RELEASE</spring.data.version>
+      <hibernate.version>4.1.0.Final</hibernate.version>
+      <hibernate.persistence.version>1.0.0.Final</hibernate.persistence.version>
+      <hsqldb.version>2.2.8</hsqldb.version>
+      <aspectj.version>1.6.9</aspectj.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- Spring Framework -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-jpa</artifactId>
+      <version>${spring.data.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-orm</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+
+      <!-- Hibernate -->
+    <dependency>
+      <groupId>org.hibernate.javax.persistence</groupId>
+      <artifactId>hibernate-jpa-2.0-api</artifactId>
+      <version>${hibernate.persistence.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-entitymanager</artifactId>
+      <version>${hibernate.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+
+    <!-- HSQL embedded database -->
+    <dependency>
+      <groupId>org.hsqldb</groupId>
+      <artifactId>hsqldb</artifactId>
+      <version>${hsqldb.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+      <dependency>
+          <groupId>org.aspectj</groupId>
+          <artifactId>aspectjweaver</artifactId>
+          <version>${aspectj.version}</version>
+          <scope>runtime</scope>
+      </dependency>
+  </dependencies>
+  <repositories>
+    <repository>
+        <id>repository.springframework.maven.release</id>
+        <name>Spring Framework Maven Release Repository</name>
+        <url>http://repo.springsource.org/libs-release</url>
+    </repository>
+  </repositories>
+
+  <pluginRepositories>
+    <pluginRepository>
+        <id>repository.plugin.springsource.release</id>
+        <name>SpringSource Maven Repository</name>
+        <url>http://repo.springsource.org/plugins-release</url>
+    </pluginRepository>
+  </pluginRepositories>
+  <build>
+    <finalName>jpa-repository-example</finalName>
+  </build>
+</project>
